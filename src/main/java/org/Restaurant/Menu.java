@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Menu {
     private String name;
     private String description;
-    private ArrayList<Meal> meals;
+    static private ArrayList<Meal> meals;
 
     public Menu(String name, String description){
         this.name = name;
@@ -28,11 +28,15 @@ public class Menu {
         this.description = description;
     }
 
-    public ArrayList<Meal> getMeals() {
+    static public ArrayList<Meal> getMeals() {
         return meals;
     }
 
-    public void setMeals(ArrayList<Meal> meals) {
-        this.meals = meals;
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

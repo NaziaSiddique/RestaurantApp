@@ -4,10 +4,10 @@ import java.util.ArrayList;
 public class Meal {
     private String name;
     private String description;
-    private int price;
+    private double price;
     private ArrayList<Ingredient> ingredients;
 
-    public Meal(String name, String description, int price){
+    public Meal(String name, String description, double price){
         this.name = name;
         this.description = description;
         this.price = price;
@@ -30,11 +30,11 @@ public class Meal {
         this.description = description;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -44,5 +44,15 @@ public class Meal {
 
     public void setIngredients(ArrayList<Ingredient> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", ingredients=" + ingredients +
+                '}';
     }
 }

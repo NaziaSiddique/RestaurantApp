@@ -3,12 +3,10 @@ package org.Restaurant;
 public class Ingredient {
     private String name;
     private int quantity;
-    private double unit;
 
-    public Ingredient(String name, int quantity, double unit){
+    public Ingredient(String name, int quantity){
         this.name = name;
         this.quantity = quantity;
-        this.unit = unit;
     }
 
     public String getName(){
@@ -26,11 +24,11 @@ public class Ingredient {
         this.quantity = quantity;
     }
 
-    public double getUnit() {
-        return unit;
-    }
-
-    public void setUnit(double unit) {
-        this.unit = unit;
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "name='" + name + '\'' +
+                ", quantity=" + quantity +
+                '}';
     }
 }
