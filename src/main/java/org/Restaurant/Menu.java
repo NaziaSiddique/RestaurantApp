@@ -9,7 +9,7 @@ public class Menu {
     public Menu(String name, String description){
         this.name = name;
         this.description = description;
-        this.meals = new ArrayList<>();
+        Menu.meals = new ArrayList<>();
 
         Meal meal1 = new Meal("Chicken Tikka Baguette", "Fresh Chicken with Special Sauce", 9.99);
         meal1.getIngredients().add(new Ingredient("Chicken Tikka", 5));
