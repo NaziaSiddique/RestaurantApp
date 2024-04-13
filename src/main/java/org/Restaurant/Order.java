@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 public class Order {
     private int orderId;
+    public static int orderCounter = 0;
     private ArrayList<Meal> meals;
     private double price;
 
-    public Order(int orderId, ArrayList<Meal> meals){
-        this.orderId = orderId;
+    public Order(ArrayList<Meal> meals){
+        this.orderId = orderCounter;
+        orderCounter++;
         this.price = 0;
         this.meals = meals;
     }
