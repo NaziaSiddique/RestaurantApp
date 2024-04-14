@@ -1,19 +1,21 @@
 package org.Restaurant;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu("Sweet n Spice", "Taste and value in one");
 
-        ArrayList<Meal> mealsForOrder212 = new ArrayList<>();
-        mealsForOrder212.add(Menu.getMeals().get(2));
+//        ArrayList<Meal> foodForOrder100 = new ArrayList<>();
+//        foodForOrder100.add(Menu.getMeals().get(1));
+//        Order orderForTable5 = new Order(foodForOrder100);
+//        Customer cust = new Customer(5, orderForTable5);
 
-//        System.out.println(Menu.getMeals().get(2));
+        // How to add one customer in one line
+        Customer newCust = new Customer(4, new Order(new ArrayList<Meal>(Arrays.asList(Menu.getMeals().get(0), Menu.getMeals().get(1)))));
+        System.out.println(newCust);
 
-        Order orderForTable10 = new Order(mealsForOrder212);
 
-        Customer cust1 = new Customer(10, orderForTable10);
-        System.out.println(cust1);
     }
 }
