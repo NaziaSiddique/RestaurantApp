@@ -11,10 +11,18 @@ public class Order {
     public Order(ArrayList<Meal> meals){
         this.orderId = orderCounter;
         orderCounter++;
-        this.price = 0;
+//        this.price = 0;
         this.meals = meals;
+        calculateTotalPrice();
     }
 
+    public void calculateTotalPrice() {
+        this.price = 0;
+        for(Meal meal : meals){
+            price += meal.getPrice();
+//            System.out.println(price);
+        }
+    }
     public int getOrderId() {
         return orderId;
     }
