@@ -7,14 +7,23 @@ public class Main {
     public static void main(String[] args) {
         Menu menu = new Menu("Sweet n Spice", "Taste and value in one");
 
-//        ArrayList<Meal> foodForOrder100 = new ArrayList<>();
-//        foodForOrder100.add(Menu.getMeals().get(1));
-//        Order orderForTable5 = new Order(foodForOrder100);
-//        Customer cust = new Customer(5, orderForTable5);
+        //give me a list of customers
+        ArrayList<Customer> customers = new ArrayList<>();
 
-        // How to add one customer in one line
-        Customer newCust = new Customer(4, new Order(new ArrayList<Meal>(Arrays.asList(Menu.getMeals().get(0), Menu.getMeals().get(1)))));
-        System.out.println(newCust);
+        // First Cust order
+        ArrayList<Meal> foodForOrder10 = new ArrayList<>();
+        foodForOrder10.add(Menu.getMeals().get(2));
+        Order orderTable2 = new Order(foodForOrder10);
+        Customer customer1 = new Customer(2,orderTable2);
+
+        // Second Cust Order
+        ArrayList<Meal> foodForOrder12 = new ArrayList<>();
+        foodForOrder12.add(Menu.getMeals().get(1));
+        Order orderTable4 = new Order(foodForOrder12);
+        Customer customer2 = new Customer(4,orderTable4);
+
+        customers.addAll(Arrays.asList(customer1,customer2));
+
 
 
     }
