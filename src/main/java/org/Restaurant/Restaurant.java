@@ -6,10 +6,12 @@ public class Restaurant {
     private ArrayList<Customer> customers;
     private Staff staff;
     private Menu menu;
+    private Manager manager;
 
-    public Restaurant(Staff staff, Menu menu){
+    public Restaurant(Staff staff, Menu menu, Manager manager){
         this.menu = menu;
         this.staff = staff;
+        this.manager = manager;
         this.customers = new ArrayList<>();
     }
 

@@ -62,4 +62,12 @@ public class Menu {
                 ", description='" + description + '\'' +
                 '}';
     }
+
+    public void addMeal(Meal meal) {
+        meals.add(meal);
+    }
+
+    public boolean doesMealExist(Meal meal) {
+        return Menu.getMeals().contains(meal);
+    }
 }
