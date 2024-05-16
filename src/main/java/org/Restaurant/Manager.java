@@ -19,6 +19,21 @@ public class Manager {
 
         menu.addMeal(meal);
     }
+
+    public void removeMealFromMenu(Meal meal, Menu menu) {
+
+        menu.removeMeal(meal);
+    }
+    public void addWaitersToStaff(Waiter waiter, Staff staff) {
+
+        staff.addWaiters(waiter);
+    }
+
+    public void addChefToStaff(Chef chef, Staff staff) {
+
+        staff.setChef(chef);
+    }
+
 }
-// Create a method called removeMealFromMenu, Create a method called addWaiters, Create a method called addChef, assignCooksToChef
+//  assignCooksToChef
 // Create test cases for all the above

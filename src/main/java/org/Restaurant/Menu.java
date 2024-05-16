@@ -67,7 +67,12 @@ public class Menu {
         meals.add(meal);
     }
 
+    public void removeMeal(Meal meal) {
+        meals.remove(meal);
+    }
+
     public boolean doesMealExist(Meal meal) {
         return Menu.getMeals().contains(meal);
     }
+
 }

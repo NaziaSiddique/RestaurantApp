@@ -19,6 +19,14 @@ public class Staff {
         this.chef = chef;
     }
 
+    public void addWaiters(Waiter waiter) {
+        waiters.add(waiter);
+    }
+
+    public boolean doesWaiterExist(Waiter waiter) {
+        return waiters.contains(waiter);
+    }
+
     @Override
     public String toString() {
         return "Staff{" +
