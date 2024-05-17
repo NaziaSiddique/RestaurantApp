@@ -10,12 +10,14 @@ public class ManagerTest {
     Manager manager;
     Menu menu;
     Staff staff;
+    Chef chef;
 
     @Before
     public void initManager() {
         this.manager = new Manager("Bob");
         this.menu = new Menu("LondonBridge", "Food & Delight");
-        this.staff = new Staff(new Chef());
+        this.staff = new Staff(new Chef(new Cook()));
+        this.chef = new Chef(new Cook());
     }
 
     @Test
@@ -41,8 +43,15 @@ public class ManagerTest {
     }
     @Test
     public void addChefToStaff() {
-        Chef chef1 = new Chef();
+        Chef chef1 = new Chef(new Cook());
         manager.addChefToStaff(chef1, staff);
         assertEquals(chef1, staff.getChef());
+    }
+
+    @Test
+    public void assignCookToChef() {
+        Cook cook1 = new Cook();
+        manager.assignCookToChef(cook1, chef);
+        assert(chef.isCookAssigned(cook1));
     }
 }

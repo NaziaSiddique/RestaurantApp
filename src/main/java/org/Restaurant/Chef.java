@@ -4,11 +4,15 @@ import java.util.ArrayList;
 
 public class Chef {
     private ArrayList<Customer> customers;
-    private ArrayList<Cook> cooks;
+    static private ArrayList<Cook> cooks;
 
-    public Chef() {
+    public Chef(Cook cook) {
         this.cooks = new ArrayList<>();
         this.customers = new ArrayList<>();
+    }
+
+    static public ArrayList<Cook> getCooks() {
+        return cooks;
     }
 
     @Override
@@ -25,5 +29,14 @@ public class Chef {
 
     public static void assignReadyMealsToWaiters(){
 
+    }
+
+    public void addCook(Cook cook) {
+
+        cooks.add(cook);
+    }
+
+    public boolean isCookAssigned(Cook cook) {
+        return Chef.getCooks().contains(cook);
     }
 }

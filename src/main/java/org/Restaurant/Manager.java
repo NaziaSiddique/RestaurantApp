@@ -34,6 +34,11 @@ public class Manager {
         staff.setChef(chef);
     }
 
+    public void assignCookToChef(Cook cook, Chef chef) {
+
+        chef.addCook(cook);
+    }
+
 }
 //  assignCooksToChef
 // Create test cases for all the above
